@@ -15,7 +15,8 @@ import '@progress/kendo-theme-default/dist/all.css'
 import '@progress/kendo-ui'
 
 Vue.config.productionTip = false
-Vue.use(ButtonsInstaller, ChartInstaller)
+Vue.use(ButtonsInstaller)
+Vue.use(ChartInstaller)
 
 /* eslint-disable no-new */
 new Vue({
