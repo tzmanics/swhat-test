@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import {
-  ButtonGroupButton,
+  Button,
   ButtonsInstaller
 } from '@progress/kendo-buttons-vue-wrapper'
 import {
@@ -23,7 +23,7 @@ new Vue({
   template: '<App/>',
   components: {
     App,
-    ButtonGroupButton,
+    Button,
     Chart,
     ChartSeriesItem
   }

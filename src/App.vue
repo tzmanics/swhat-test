@@ -1,18 +1,20 @@
 <template>
   <div id="app">
+    <h1> HDYPT </h1>
+    <h4> a site that asks, 'How do you pronounce that?' </h4>
+    <term-list></term-list>
   </div>
 </template>
 
 <script>
-import Term from './components/Term'
+import TermList from './components/TermList'
 
 export default {
   name: 'app',
   components: {
-    Term
+    TermList
   }
 }
 </script>
-
 <style>
 </style>
