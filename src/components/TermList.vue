@@ -32,6 +32,7 @@
         <div class='term-vote-chart'>
           <kendo-chart
             :series-defaults-type="'donut'"
+            :chart-area-background="''"
             :series="series"
             :tooltip="tooltip">
 
@@ -88,4 +89,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.term-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: solid black 3px;
+  height: 235px;
+  margin: 1em auto;
+  max-width: 800px;
+  padding: 5px;
+}
+
+.term {
+  border-right: solid black 1px;
+  float: left;
+  padding: 10px;
+  width: 45%;
+}
+
+.submit-vote {
+  float: right;
+  margin: 5px 5px 0 0;
+}
+
+.term-voting {
+  float: right;
+  padding: 10px;
+  text-align: right;
+}
+
+.k-chart {
+  height: 200px;
+}
 </style>
