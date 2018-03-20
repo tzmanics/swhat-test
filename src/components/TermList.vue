@@ -31,12 +31,10 @@
         <h2> Voting Results </h2>
         <div class='term-vote-chart'>
           <kendo-chart
-            :title-text="'Voting Results'"
-            :series="series"
-            :legend-visible=false
-            :chart-area-background="''"
             :series-defaults-type="'donut'"
+            :series="series"
             :tooltip="tooltip">
+
           </kendo-chart>
         </div>
       </div>
@@ -52,17 +50,7 @@ export default {
       selected: 0,
       pronunciation1Votes: 0,
       pronunciation2Votes: 0,
-      series: [{
-        name: 'gif',
-        data: [this.pronunciation1Votes]
-      }, {
-        name: 'jif',
-        data: [this.pronunciation2Votes]
-      }],
-      tooltip: {
-        visible: true,
-        template: '#= value'
-      }
+      tooltip: { visible: true, template: '#= value # votes' }
     }
   },
   methods: {
@@ -78,6 +66,21 @@ export default {
       console.log(
         '1: %s, 2: %s', this.pronunciation1Votes, this.pronunciation2Votes
       )
+    }
+  },
+  computed: {
+    series: function () {
+      return [{
+        data: [{
+          category: 'gif',
+          value: this.pronunciation1Votes,
+          color: '#fff258'
+        }, {
+          category: 'jif',
+          value: this.pronunciation2Votes,
+          color: '#58d9ff'
+        }]
+      }]
     }
   }
 }
